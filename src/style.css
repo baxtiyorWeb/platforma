@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background: #123;
+}
+
+#nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+header #nav ul li {
+    list-style-type: none;
+}
+
+header #nav ul li a {
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.searchBox {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f2f2;
+    transition: 0.3s ease;
+
+    position: relative;
+}
+
+/* for logo */
+
+.logo a img {
+    width: 50px;
+    height: 50px;
+    color: red;
+}
+
+.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+}
+
+.logo a p {
+    font-size: 20px;
+}
+
+.searchBox.sticky {
+    position: fixed;
+    background-color: #123;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 3px 30px 5px grey;
+}
+
+.searchBox.sticky button {
+    background-color: transparent;
+    color: white;
+}
+
+.searchBox.sticky button:hover {
+    background-color: whitesmoke;
+}
+
+.searchBox.sticky .searchItems button:hover a {
+    color: #123;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.searchBox.sticky .searchItems .searchInput {
+    padding: 8px;
+    background-color: #3333;
+    color: white;
+    font-size: 18px;
+}
+
+.searchBox.sticky .searchItems button a {
+    color: white;
+}
+
+.menu_show_btn {
+    position: fixed;
+    z-index: 5;
+}
+
+.searchItems {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchBox .container .searchItems input {
+    padding: 14px;
+    width: 400px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: rgba(234, 233, 233, 0.74);
+    color: #0200fe;
+    font-size: 15px;
+}
+
+.searchBox .container .searchItems input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.searchBox .container .searchItems .searchItem {
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 3px;
+}
+
+.searchBox .container .searchItems .searchItem i {
+    font-size: 20px;
+    color: blue;
+    font-weight: 900;
+}
+
+.searchBox .container .menuBTn {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid blue;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+.menuBTn a {
+    color: #000;
+    font-size: 12px;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.menuBTn a:hover {
+    text-decoration: underline;
+}
+
+.menuList {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+/* aside */
+aside {
+    width: 310px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -350px;
+    box-shadow: 1px 00px 30px 0px gray;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.modal_s {
+    background-color: gray;
+    cursor: pointer;
+}
+
+aside.hideaside {
+    transform: translate(350px);
+}
+
+.menu {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* videoTitle style */
+
+.videoTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.videoTitle .icon i {
+    font-size: 20px;
+}
+
+/* videoTitle styled */
+
+.menu button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.menu button i {
+    font-size: 40px;
+    color: #000;
+}
+
+.Users_menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+
+.menuElement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users_Tools {
+    width: 85%;
+    height: 100%;
+    margin: 10px auto;
+}
+
+.users_Tools .menu_items_user_tools {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.users_Tools .menu_items_user_tools {
+    list-style: none;
+    width: 100%;
+}
+
+.users_Tools .menu_items_user_tools a {
+    width: 100%;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    transition: 0.3s ease;
+}
+
+.users_Tools .menu_items_user_tools a:hover {
+    background-color: antiquewhite;
+    color: darkblue;
+}
+
+/* video tools */
+.videoEdited {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.videoEdited {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+}
+
+/* profil_About styled */
+.profil_About {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.profil_About .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil_About .icon .user i {
+    font-size: 50px;
+}
+
+.profil_About .profil_name h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* profil_About styled */
+.videoEdited .video {
+    width: 300px;
+    height: 400px;
+    margin: 50px auto;
+    margin-top: 11px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video .videoAbout {
+    border-radius: 13px;
+    cursor: pointer;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.video .videoAbout p {
+    padding-top: 13px;
+}
+
+.video video {
+    width: 100%;
+    height: 200px;
+
+}
+
+.hide {
+    display: none;
+}
+
+/* viewer */
+
+.viewer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.viewer .span_element {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.viewer img {
+    width: 20px;
+    height: 20px;
+}
+
+.viewer mark {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0200fe;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.viewer mark img {
+    color: white;
+}
+
+/* like And dislike */
+.like {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.like button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.likeBtn {
+    color: greenyellow;
+}
+
+.dislikeBtn {
+    color: red;
+}
+
+.like button i {
+    font-size: 25px;
+}
+
+/* author Style */
+
+.author {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author_Name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.author_Name h4 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.author_Name .icon i {
+    color: orangered;
+    font-size: 18px;
+}
