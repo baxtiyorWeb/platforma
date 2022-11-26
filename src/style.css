@@ -107,7 +107,11 @@ header #nav ul li a {
     box-shadow: 0px 3px 30px 5px grey;
 }
 
-.searchBox.sticky button {
+.searchBox button i {
+    color: white;
+}
+
+.searchBox.sticky a {
     background-color: transparent;
     color: white;
 }
@@ -116,10 +120,10 @@ header #nav ul li a {
     background-color: whitesmoke;
 }
 
-.searchBox.sticky .searchItems button:hover a {
-    color: #123;
+.searchBox.sticky .searchItems a:hover {
+    color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .searchBox.sticky .searchItems .searchInput {
@@ -184,15 +188,20 @@ header #nav ul li a {
     transition: 0.3s ease;
 }
 
-.menuBTn a {
+.menuList a {
     color: #000;
     font-size: 12px;
     padding: 10px;
     font-weight: 800;
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: 0.3s ease;
 }
 
-.menuBTn a:hover {
-    text-decoration: underline;
+.menuList a:hover {
+    background-color: #0200fe;
+    color: white;
 }
 
 .menuList {
@@ -244,6 +253,11 @@ aside.hideaside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.videoTitle h3 {
+    width: 100%;
+    height: 30px;
 }
 
 .videoTitle .icon i {
@@ -490,4 +504,128 @@ aside.hideaside {
 .author_Name .icon i {
     color: orangered;
     font-size: 18px;
+}
+
+.videoPlayer {
+    width: 800px;
+    height: 450px;
+    border: 1px solid #000;
+    margin-left: 50px;
+}
+
+.videoPlayers {
+    width: 100%;
+    height: 380px;
+    border:
+        1px solid #000;
+}
+
+.videoPlayers video {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+}
+
+/* video player settings style */
+.videoSettings {
+    width: 100%;
+    height: 15.5%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+.videoSettings .nextAndPrew {
+    width: 20%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.videoSettings .nextAndPrew button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.videoSettings .nextAndPrew button i {
+    font-size: 25px;
+    color: white;
+}
+
+.videoPauseAndPlay {
+    width: 20%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.videoPauseAndPlay button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+}
+
+.videoPauseAndPlay button i {
+    font-size: 25px;
+    color: white;
+}
+
+/* video player settings style */
+
+/* like and Dislike styled */
+
+.LikeAndDislike {
+    width: 30%;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LikeAndDislike button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.LikeAndDislike button i {
+    font-size: 20px;
+    color: white;
+}
+
+.LikeAndDislike .stars i {
+    color: orangered;
+    cursor: pointer;
+}
+
+.videoTags {
+    width: 800px;
+    border: 1px solid #000;
+    margin-left: 50px;
+}
+.videoTags .videoAbout .videoTitle{
+    border: 1px solid red;
+}
+.videoTags .viewer .like{
+    border: 1px solid #000;
+}
+.likesAnd_dislike {
+    border: 1px solid #000;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
 }

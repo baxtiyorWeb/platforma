@@ -5,6 +5,31 @@ let lessons = document.querySelector('#lessons')
 let option = document.querySelector('option')
 let videoAbout = document.querySelectorAll('.videoAbout')
 let video = document.querySelectorAll('.video')
+let videoTitle = document.querySelectorAll('h3')
+
+function localstorages(i) {
+    for (let i = 0; i < videoAbout.length; i++) {
+        console.log(videoAbout[i].length);
+        videoAbout[i].addEventListener('click', function () {
+            localStorage.setItem('keyingi sahifa',)
+        })
+    }
+}
+// localstorages()
+
+
+
+
+function lengths() {
+    videoTitle.forEach((item) => {
+        if (item.innerText.length > 24) {
+            let r = item.innerHTML.slice(0, 27)
+            item.innerHTML = r + ' . . . '
+        }
+    })
+}
+lengths()
+
 function search_Item() {
     searchInput.addEventListener('input', function () {
         if (searchInput.value.length > 1) {
@@ -25,7 +50,7 @@ function search_Item() {
 search_Item()
 
 window.addEventListener('scroll', function () {
-    if (this.scrollY > 60) {
+    if (this.scrollY > 30) {
         searchBox.classList.add('sticky')
     } else {
         searchBox.classList.remove('sticky')
