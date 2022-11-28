@@ -214,6 +214,7 @@ header #nav ul li a {
 main {
     width: 100%;
     background-color: antiquewhite;
+    position: relative;
 }
 
 /* aside */
@@ -571,7 +572,6 @@ aside.hideaside {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    position: absolute;
 }
 
 .videoPauseAndPlay button i {
@@ -617,15 +617,48 @@ aside.hideaside {
     border: 1px solid #000;
     margin-left: 50px;
 }
-.videoTags .videoAbout .videoTitle{
+
+.videoTags .videoAbout .videoTitle {
     border: 1px solid red;
 }
-.videoTags .viewer .like{
+
+.videoTags .viewer .like {
     border: 1px solid #000;
 }
+
 .likesAnd_dislike {
     border: 1px solid #000;
     width: 20%;
     display: flex;
     justify-content: space-around;
+}
+
+.aside_videos {
+    width: 380px;
+    border: 1px solid #000;
+    transform: translateX(900px) translateY(-584px);
+}
+
+.aside_videos .aside_menu_video {
+    width: 90%;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+.aside_videos .aside_menu_video video {
+    width: 100%;
+    height: 30%;
+    border: 1px solid #000;
+}
+#items{
+    cursor: pointer;
+}
+#like.addlike{
+    background-color: green;
+}
+#dislike.add_dislike{
+    background-color: red;
+}
+.stars i.starsball{
+    color: blue;
 }
