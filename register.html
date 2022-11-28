@@ -9,12 +9,13 @@
 </head>
 
 <body>
-    <form action="login.html">
+    <form action="#">
         <input type="email">
         <button class="send">submit</button>
     </form>
 
-
+        
+    
     <script>
         let form = document.querySelector('form')
         let input = document.querySelector('input')
@@ -32,7 +33,7 @@
                     send.innerHTML = 'bosh sahifaga qaytish'
                 } else {
                     localStorage.setItem('email', input.value)
-                    form.action = 'login.html'
+                    form.action = '#'
                 }
             }
         })
