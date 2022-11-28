@@ -74,3 +74,7 @@ menu_show_btn.addEventListener('click', function () {
 menu_hide_btn.addEventListener('click', function () {
     hideMenu()
 })
+
+let profil_name = document.querySelector('.profil_name h3')
+
+profil_name.innerHTML = localStorage.getItem('email')
