@@ -102,7 +102,11 @@ header #nav ul li a {
   position: fixed;
   background-color: #123;
   top: 0;
+/* <<<<<<< HEAD */
   z-index: 999;
+/* ======= */
+  z-index: 10;
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
   box-shadow: 0px 3px 30px 5px grey;
 }
 
@@ -148,8 +152,13 @@ header #nav ul li a {
 }
 
 .searchBox .container .searchItems input {
+/* <<<<<<< HEAD */
   padding: 10px;
   width: 500px;
+/* ======= */
+  padding: 14px;
+  width: 400px;
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
   border-radius: 10px;
   outline: none;
   border: none;
@@ -157,9 +166,13 @@ header #nav ul li a {
   color: #0200fe;
   font-size: 15px;
 }
+/* <<<<<<< HEAD */
 .searchBox .container .searchItems input:focus {
   border: 2px solid blue;
 }
+/* ======= */
+
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
 .searchBox .container .searchItems input::-webkit-search-cancel-button {
   display: none;
 }
@@ -228,7 +241,11 @@ aside {
   box-shadow: 1px 00px 30px 0px gray;
   background-color: white;
   transition: 0.3s ease-in-out;
+/* <<<<<<< HEAD */
   z-index: 999;
+/* ======= */
+  z-index: 90;
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
 }
 
 .modal_s {
@@ -238,6 +255,10 @@ aside {
 
 aside.hideaside {
   transform: translate(350px);
+/* <<<<<<< HEAD */
+/* ======= */
+  z-index: 99;
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
 }
 
 .menu {
@@ -430,7 +451,10 @@ aside.hideaside {
   justify-content: space-between;
   align-items: center;
 }
+/* <<<<<<< HEAD */
 
+/* ======= */
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
 .viewer img {
   width: 20px;
   height: 20px;
@@ -646,6 +670,7 @@ aside.hideaside {
   height: 30%;
   border: 1px solid #000;
 }
+/* <<<<<<< HEAD */
 #items {
   cursor: pointer;
 }
@@ -741,3 +766,28 @@ form button {
   z-index: 1;
   cursor: pointer;
 }
+/* ======= */
+
+#items {
+  cursor: pointer;
+}
+
+#like.addlike {
+  background-color: green;
+}
+
+#dislike.add_dislike {
+  background-color: red;
+}
+
+.stars i.starsball {
+  color: blue;
+}
+/* aside .Users_menu .users_Tools .menu_items_user_tools a::backdrop{
+  background-color: blue;
+  color: white;
+  pointer-events: none;
+} */
+
+
+/* >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74 */
