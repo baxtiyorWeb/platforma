@@ -86,8 +86,7 @@ const openModal = function() {
 menu_show_btn.addEventListener("click", openModal);
 
 let profil_name = document.querySelector(".profil_name h3");
-profil_name.innerHTML = localStorage.getItem("email");
-
+profil_name.innerHTML = localStorage.getItem("username");
 
 // =======
 function showMenu() {
@@ -105,16 +104,4 @@ menu_hide_btn.addEventListener("click", function() {
   hideMenu();
 });
 
-let profil_name = document.querySelector(".profil_name h3");
-
-fetch("http://localhost:3004/development")
-  .then(res => res.json())
-  .then(data => func(data));
-
-function func(data) {
-  data.forEach(item => {
-    console.log(item);
-    let videoEdited = document.querySelector(".videoEdited");
-  });
-}
-// >>>>>>> 10f711a7867913294faf35cd5039877d40a5ac74
+// let profil_name = document.querySelector(".profil_name h3");

@@ -24,15 +24,17 @@
                     <button class="send">signup</button>
                     <label> OR Google sign in</label>
                     <button class="google_login"><i class="bx bxl-google"></i></button>
-
                 </div>
                 <div class="login">
-                    <h1>sign In</h1>
-                    <div class="form">
-                        <input type="email" id="signemail" placeholder="Email">
-                        <input type="password" class="signpassword" id="signpassword" placeholder="Password">
-                    </div>
-                    <button class="loginBtn" id="signsend">Login</button>
+                    <form action="home.html" id="formSign">
+                        <h1>sign In</h1>
+                        <div class="form">
+                            <input type="email" id="signemail" placeholder="Email">
+                            <input type="password" class="signpassword" id="signpassword" placeholder="Password">
+                        </div>
+                        <button class="loginBtn" id="signsend">Login</button>
+
+                    </form>
 
                 </div>
             </form>
@@ -95,6 +97,7 @@
                         username: username,
                         email: email
                     })
+                    localStorage.setItem("username", username)
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -124,9 +127,11 @@
             let email = document.querySelector("#signemail").value;
             let password = document.querySelector("#signpassword").value;
             signInWithEmailAndPassword(auth, email, password)
-                .then(userCredential => {
-                    // Signed in
-                    const user = userCredential.user;
+            .then(userCredential => {
+                // Signed in
+                const user = userCredential.user;
+                let formSign = document.querySelector('#formSign')
+                formSign.action = 'home.html'
                     // ...
                     // let username = document.querySelector('#signusername')
                     alert("Login gmail");
@@ -135,6 +140,7 @@
                         last_login: dr
                     });
                 })
+
                 .catch(error => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
