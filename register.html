@@ -127,11 +127,11 @@
             let email = document.querySelector("#signemail").value;
             let password = document.querySelector("#signpassword").value;
             signInWithEmailAndPassword(auth, email, password)
-            .then(userCredential => {
-                // Signed in
-                const user = userCredential.user;
-                let formSign = document.querySelector('#formSign')
-                formSign.action = 'home.html'
+                .then(userCredential => {
+                    // Signed in
+                    const user = userCredential.user;
+                    let formSign = document.querySelector('#formSign')
+                    formSign.action = 'home.html'
                     // ...
                     // let username = document.querySelector('#signusername')
                     alert("Login gmail");

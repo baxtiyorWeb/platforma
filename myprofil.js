@@ -1,10 +1,13 @@
+let imgsfile = document.querySelector("#imgsfile");
+let imgsfiles = document.querySelector(".user");
+let icons = document.querySelector(".user i");
+// document.addEventListener("DOMContentLoaded", getLocal);
 let searchBox = document.querySelector(".searchBox");
 let searchInput = document.querySelector("#searchInput");
 let searchItemBtn = document.querySelector(".searchItem");
 let lessons = document.querySelector("#lessons");
 let option = document.querySelector("option");
 let videoAbout = document.querySelectorAll(".videoAbout");
-let video = document.querySelectorAll(".video");
 let videoTitle = document.querySelectorAll("h3");
 
 function localstorages(i) {
@@ -104,35 +107,72 @@ menu_hide_btn.addEventListener("click", function() {
   hideMenu();
 });
 
-let signUp = document.querySelector(".signUpemail");
-signUp.innerHTML = localStorage.getItem("username");
-signUp.setAttribute("href", "myProfil.html");
-let videosrc = document.querySelectorAll("video");
-// video.forEach((item)=>{
-  
-  for (let i = 0; i < videosrc.length; i++) {
-    let a = document.createElement('a')
-    a.append(videoAbout[i])
-    video[i].append(a);
-    a.append(videoAbout[i]);
-    a.addEventListener("click", function() {
-      // let a = document.createElement("a")
-      videoAbout[i].append(videosrc);
-      a.setAttribute("href", "./myProfil.html");
-      videoAbout[i].append(videosrc);
-      // set local//
-      local(videosrc[i].src);
-
-    });
-    function local(todo) {
-      let todos;
-      if (localStorage.getItem("video") === null) {
-        todos = [];
-      } else {
-        todos = JSON.parse(localStorage.getItem("video"));
-      }
-      todos.push(todo);
-      localStorage.setItem("video", JSON.stringify(todos));
+let file;
+let img = document.createElement("img");
+img.style.width = "50px";
+img.style.height = "50px";
+img.style.borderRadius = "100%";
+imgsfile.addEventListener("change", function(e) {
+  let filed = URL.createObjectURL(e.target.files[0]);
+  img.src = filed;
+  imgsfiles.append(img);
+  console.log("img");
+  console.log("clicked");
+  console.log(img);
+  imgsfile.style.display = "none";
+  icons.style.display = "none";
+  function local(todo) {
+    let todos;
+    if (localStorage.getItem("icon") === null) {
+      todos = [];
+    } else {
+      todos = JSON.parse(localStorage.getItem("icon"));
     }
-   
+    todos.push(todo);
+    localStorage.setItem("icon", JSON.stringify(todos));
+  }
+
+  local(img.src);
+  let saved = (imgsfile.style.display = "none");
+  let saveds = (icons.style.display = "none");
+  localStorage.setItem("style", saved, saveds);
+  localStorage.getItem("style");
+});
+
+let savedVideo = document.querySelector(".savedVideo");
+
+function getLocals() {
+  let todos;
+  if (localStorage.getItem("video") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("video"));
+  }
+  // let videos = document.querySelector(".video");
+  let videoCreate = document.createElement("div");
+  videoCreate.classList.add("videoCreate");
+  let savedVideo = document.querySelector(".savedVideo");
+  todos.forEach(function(todo) {
+    let video = document.createElement("video");
+    let videolclass = document.createElement("div");
+    videolclass.classList.add("video");
+    savedVideo.append(videoCreate);
+    videoCreate.append(videolclass);
+    videolclass.append(video);
+    let play = document.createElement("button");
+    videolclass.append(play);
+    video.src;
+    play.innerHTML = "ijro etish";
+    play.addEventListener("click", () => {
+      if (play.innerHTML === "ijro etish") {
+        play.innerHTML = "pause";
+        video.play();
+      } else {
+        video.pause();
+        play.innerHTML = "ijro etish";
+      }
+    });
+    video.src = todo;
+  });
 }
+getLocals();

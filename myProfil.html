@@ -1,16 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon"
-        href="https://www.sfusd.edu/sites/default/files/styles/max_635/public/noun_video%20streaming_2244010.png?itok=eoEU9t2o">
-    <title>Development</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -18,7 +15,7 @@
         <div class="container">
             <nav id="nav">
                 <div class="logo">
-                    <a href="home.html"><img
+                    <a href="./index.html"><img class="imgsfile"
                             src="https://www.sfusd.edu/sites/default/files/styles/max_635/public/noun_video%20streaming_2244010.png?itok=eoEU9t2o"
                             alt="rasm">
                         <p>Development</p>
@@ -28,7 +25,7 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Premium platform</a></li>
-                    <li><a href="login.html">Sign In</a></li>
+                    <li><a href="register.html">Sign In</a></li>
                     <li><a href="register.html" class="signUpemail">Sign Up</a></li>
                 </ul>
             </nav>
@@ -62,9 +59,7 @@
         </div>
     </div>
     <main>
-        <div class="container">
 
-        </div>
         <div class="container">
             <div class="menu">
                 <button class="menu_show_btn"><i class="bx bx-menu"></i></button>
@@ -88,15 +83,18 @@
                             <div class="profil_About">
                                 <img src="" alt="">
                                 <div class="icon">
-                                    <div class="user">
+                                    <div class="user" class="imgsfile">
                                         <i class='bx bxs-user-circle'></i>
+
+
                                     </div>
                                 </div>
                                 <div class="profil_name">
+                                    <input type="file" id="imgsfile">
                                     <h3>Baxtiyor Qurbonnazarov</h3>
                                 </div>
                             </div>
-                            <a href="myportfiyo.html">My Portfoliyo</a>
+                            <a href="">My Portfoliyo</a>
                             <a href="">My Courses</a>
                             <a href="">My Resume</a>
                             <a href="">Certificates</a>
@@ -112,55 +110,51 @@
             <div class="overlay">
 
             </div>
-            <div class="videoEdited">
-                <div class="video">
-                    <div class="videoAbout">
-                        <video src=""></video>
-                        <div class="videoTitle">
-                            <h3>Html darslari</h3>
-                            <div class="icon">
-                                <i class='bx bx-duplicate'></i>
-                            </div>
-                        </div>
-                        <div class="video_About">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, dolore!</p>
-                        </div>
-                        <div class="author">
-                            <div class="author_Name">
-                                <h4>Baxtiyor</h4>
-                                <div class="icon">
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="viewer">
-                            <div class="span_element">
-                                <div class="like" id="like">
-                                    <button class="likeBtn"><i class='bx bxs-like'></i></button>
-                                    <b class="forlike_btn">1</b>
-                                </div>
-                                <div class="like" id="disLike">
-                                    <button class="dislikeBtn"><i class='bx bxs-dislike'></i></button>
-                                    <b class="fordislike_btn">1</b>
-                                </div>
-                                <mark>
-                                    <img class="viewIcon" src="https://cdn-icons-png.flaticon.com/512/4449/4449638.png"
-                                        alt="">
-                                    <b>/12334</b>
-                                </mark>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="savedVideo">
             </div>
+
         </div>
+
     </main>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="myprofil.js"></script>
+
+
+    <script type="module">
+            // Import the functions you need from the SDKs you need
+            // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+            // import { getFirestore, collection, addDoc, db, docRef } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+            // // TODO: Add SDKs for Firebase products that you want to use
+            // // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // // Your web app's Firebase configuration
+            // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            // const firebaseConfig = {
+            //     apiKey: "AIzaSyC8O7-NMH9cOvA_41hugsq0LOJorGG6DEM",
+            //     authDomain: "todolist-c53d6.firebaseapp.com",
+            //     projectId: "todolist-c53d6",
+            //     storageBucket: "todolist-c53d6.appspot.com",
+            //     messagingSenderId: "201760779239",
+            //     appId: "1:201760779239:web:82f27e625797f91f8aab42",
+            //     measurementId: "G-RZBE6CEE85"
+            // };
+            // try {
+            //     const docRef = await addDoc(collection(db, "users"), {
+            //         first: "Ada",
+            //         last: "Lovelace",
+            //         born: 1815
+            //     });
+            //     console.log("Document written with ID: ", docRef.id);
+            // } catch (e) {
+            //     console.error("Error adding document: ", e);
+            // }
+
+
+            // Initialize Firebase
+            // const app = initializeApp(firebaseConfig);
+            // const analytics = getAnalytics(app);
+    </script>
 </body>
 
 </html>
