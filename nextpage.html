@@ -108,7 +108,67 @@
             <div class="overlay">
 
             </div>
-            <script src="index.js"></script>
+            <div class="savedVideo">
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+    <script>
+        let savedVideo = document.querySelector(".savedVideo");
+        let videoCreate = document.createElement("div");
+        videoCreate.classList.add("videoCreate");
+        function getLocals() {
+            let todos;
+            if (localStorage.getItem("video") === null) {
+                todos = [];
+            } else {
+                todos = JSON.parse(localStorage.getItem("video"));
+            }
+            let titles;
+            if (localStorage.getItem("title") === null) {
+                titles = [];
+            } else {
+                titles = JSON.parse(localStorage.getItem("title"));
+            }
+
+            todos.forEach(function (todo) {
+                let video = document.createElement("video");
+                let videolclass = document.createElement("div");
+                videolclass.classList.add("video");
+                savedVideo.append(videoCreate);
+                videoCreate.append(videolclass);
+                videolclass.append(video);
+                let play = document.createElement("button");
+                videolclass.append(play);
+                titles.forEach((item) => {
+                    let h3 = document.createElement("h3");
+                    videolclass.append(h3);
+                    videolclass.classList.add("video");
+                    h3.innerHTML = item;
+
+                })
+
+
+                video.src;
+                play.innerHTML = "ijro etish";
+                // h3.innerHTML = "ijro etish";
+                play.addEventListener("click", () => {
+                    if (play.innerHTML === "ijro etish") {
+                        play.innerHTML = "pause";
+                        video.play();
+                    } else {
+                        video.pause();
+                        play.innerHTML = "ijro etish";
+                    }
+                });
+                video.src = todo;
+
+            });
+
+        }
+
+        getLocals();
+    </script>
 </body>
 
 

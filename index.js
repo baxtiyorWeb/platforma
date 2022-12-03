@@ -97,6 +97,23 @@ function hideMenu() {
   aside.classList.remove("hideaside");
 }
 
+window.addEventListener("keydown", function(e) {
+  console.log(e.keyCode);
+  switch (e.keyCode) {
+    case 39:
+      showMenu();
+      openModal();
+      break;
+    case 37:
+      hideMenu();
+      closeModal();
+    default:
+      break;
+    case 32:
+      showMenu();
+      openModal();
+  }
+});
 menu_show_btn.addEventListener("click", function() {
   showMenu();
 });
@@ -104,35 +121,67 @@ menu_hide_btn.addEventListener("click", function() {
   hideMenu();
 });
 
+// fetch('https://www.googleapis.com/youtube/v3/search')
+// .then((res)=> res.json())
+// .then((data)=> console.log(data))
+// [
+//   {
+//     "kind": "youtube#searchListResponse",
+//     "etag": searchInput.value,
+//     "nextPageToken": searchInput.value,
+//     "prevPageToken": searchInput.value,
+//     "regionCode": searchInput.value,
+//     "pageInfo": {
+//       "totalResults": searchInput.value,
+//       "resultsPerPage": searchInput.value
+//     },
+//     "items": [
+//        searchInput.value
+
+//     ]
+//   }
+
+// ]
+
 let signUp = document.querySelector(".signUpemail");
 signUp.innerHTML = localStorage.getItem("username");
 signUp.setAttribute("href", "myProfil.html");
 let videosrc = document.querySelectorAll("video");
 // video.forEach((item)=>{
-  
-  for (let i = 0; i < videosrc.length; i++) {
-    let a = document.createElement('a')
-    a.append(videoAbout[i])
-    video[i].append(a);
-    a.append(videoAbout[i]);
-    a.addEventListener("click", function() {
-      // let a = document.createElement("a")
-      videoAbout[i].append(videosrc);
-      a.setAttribute("href", "./myProfil.html");
-      videoAbout[i].append(videosrc);
-      // set local//
-      local(videosrc[i].src);
-
-    });
-    function local(todo) {
-      let todos;
-      if (localStorage.getItem("video") === null) {
-        todos = [];
-      } else {
-        todos = JSON.parse(localStorage.getItem("video"));
-      }
-      todos.push(todo);
-      localStorage.setItem("video", JSON.stringify(todos));
+// let videoTitle = document.querySelectorAll()
+for (let i = 0; i < videosrc.length; i++) {
+  let a = document.createElement("a");
+  a.append(videoAbout[i]);
+  video[i].append(a);
+  a.append(videoAbout[i]);
+  a.addEventListener("click", function() {
+    // let a = document.createElement("a")
+    videoAbout[i].append(videosrc);
+    a.setAttribute("href", "./nextpage.html");
+    videoAbout[i].append(videosrc);
+    // set local//
+    local(videosrc[i].src);
+    Textlocal(videoTitle[i].innerText);
+    // local(videoTitle[i].innerText);
+  });
+  function local(todo) {
+    let todos;
+    if (localStorage.getItem("video") === null) {
+      todos = [];
+    } else {
+      todos = JSON.parse(localStorage.getItem("video"));
     }
-   
+    todos.push(todo);
+    localStorage.setItem("video", JSON.stringify(todos));
+  }
+  function Textlocal(todo) {
+    let todos;
+    if (localStorage.getItem("title") === null) {
+      todos = [];
+    } else {
+      todos = JSON.parse(localStorage.getItem("title"));
+    }
+    todos.push(todo);
+    localStorage.setItem("title", JSON.stringify(todos));
+  }
 }
